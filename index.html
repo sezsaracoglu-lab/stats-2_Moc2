@@ -18,21 +18,21 @@
 <body>
 <header>
  <div class="toprow"><div><div class="eyebrow">Sezen’s study room · Statistics II</div><h1>Understand it. Then answer it.</h1></div><div class="initial" aria-hidden="true">S.</div></div>
- <p>Your original exam notes + five new practice sets. 240 questions in one study room. Choose an answer to reveal the reasoning, calculation, and memory cue.</p>
+ <p>Mock paper A + five new practice sets. 240 questions in one study room. Choose an answer to reveal the reasoning, calculation, and memory cue.</p>
  <div class="overview"><div><strong id="answered">0</strong><span> / 40 explored in this set</span></div><div><strong id="score">0 / 0</strong><span> scored answers correct</span></div><div id="eligible" style="color:var(--muted)"></div></div>
  <p id="allProgress" class="all-progress"></p><div class="track" role="progressbar" aria-label="Questions explored" aria-valuemin="0" aria-valuemax="40" aria-valuenow="0"><div id="progress" style="width:0%"></div></div>
 </header>
 <noscript><p class="noscript">Please enable JavaScript to use this interactive quiz. This file works offline and does not need a server.</p></noscript>
 <div class="layout">
  <aside aria-label="Question navigation">
-  <label for="set">Choose your exam set</label><select id="set"></select><p id="setDescription" class="set-description"></p><div class="filters"><div><label for="topic">Choose a topic</label><select id="topic"><option value="all">All topics</option></select></div><div><label for="filter">Practice focus</label><select id="filter"><option value="all">All 40 in this set</option><option value="scored">Scored questions</option><option value="unanswered">Not yet answered</option><option value="mistakes">Review mistakes</option><option value="incomplete">Missing / unclear notes</option><option value="corrected">Corrected answer notes</option></select></div></div>
+  <label for="set">Choose your exam set</label><select id="set"></select><p id="setDescription" class="set-description"></p><div class="filters"><div><label for="topic">Choose a topic</label><select id="topic"><option value="all">All topics</option></select></div><div><label for="filter">Practice focus</label><select id="filter"><option value="all">All 40 in this set</option><option value="scored">Scored questions</option><option value="unanswered">Not yet answered</option><option value="mistakes">Review mistakes</option><option value="incomplete">Missing / unclear questions</option><option value="corrected">Corrected answer notes</option></select></div></div>
   <div id="filterStatus" class="filter-status"></div><div class="map" id="map"></div>
-  <div class="legend"><span>Green = correct</span><span>Pink = revisit</span><span>Dashed = incomplete note</span></div>
+  <div class="legend"><span>Green = correct</span><span>Pink = revisit</span><span>Dashed = incomplete question</span></div>
   <div class="aside-controls"><button class="smallbtn" id="reset">Reset this set</button></div>
   <p class="aside-note" id="storageNote">Progress stays in this browser. Each set saves separately. No account, tracking, or internet connection needed.</p>
  </aside>
  <main id="main">
-  <details class="guide"><summary>About the original notes & new practice sets</summary><p><b>Checked</b> means the answer agrees with the available question. <b>Corrected</b> means a calculation or statistical principle contradicts the saved answer. The original is retained under every question. <b>Incomplete</b> means essential wording, data, or a graph is missing or inconsistent. Those items offer a reasoning check and approach, and do not count toward your score. The original set is based on your recollection. The five new sets are newly authored practice questions covering the same topics, with complete data and worked answers. None of the sets is an official exam or answer key. Scores and progress are stored separately for each set.</p></details>
+  <details class="guide"><summary>About Mock paper A & the new practice sets</summary><p><b>Checked</b> means the answer agrees with the available question. <b>Corrected</b> means a calculation or statistical principle contradicts the keyed answer. <b>Incomplete</b> means essential wording, data, or a graph is missing or inconsistent. Those items offer a reasoning check and approach, and do not count toward your score. The five new sets are newly authored practice questions covering the same topics, with complete data and worked answers. All sets are practice material. Scores and progress are stored separately for each set.</p></details>
   <div id="complete"></div><section class="card" id="questionCard" aria-labelledby="questionTitle"></section>
   <div class="navigation"><button id="prev" class="navbtn secondary">← Previous</button><button id="next" class="navbtn">Next question →</button></div>
   <div class="bottom-tools"><button class="smallbtn" id="random">Surprise me</button><button class="smallbtn" id="unanswered">Next unanswered</button><button class="smallbtn" id="mistakes">Review scored mistakes</button></div>
@@ -43,8 +43,8 @@
 <script id="question-data" type="application/json">[
   {
     "id": "original",
-    "title": "Original exam notes",
-    "description": "Your 40 saved questions and answer notes, with corrections and incomplete items flagged.",
+    "title": "Mock paper A",
+    "description": "40 practice questions, with corrections and incomplete items flagged.",
     "questions": [
       {
         "id": 1,
@@ -62,13 +62,13 @@
           "We are looking at a DIFFERENCE between two proportions.",
           "If the proportions were equal, their difference would be 0.",
           "The whole interval lies above 0: from 0.04 to 0.22.",
-          "Therefore, a two-sided test matching this confidence level would reject equality. The confidence level itself is not recorded."
+          "Therefore, a two-sided test matching this confidence level would reject equality. The confidence level itself is not given."
         ],
         "formula": "Equal proportions → p₁ − p₂ = 0\n0 is not in (0.04, 0.22)",
         "hook": "For a difference, look for ZERO.",
         "status": "checked",
         "note": "",
-        "original": "1) educational researchers compare 2 schools based on percentages of people reading. CI=0.04 and 0.22. the head teacher of school A with more difficulties claims that there are no differences, what is your conclusion\n•\tThe director is incorrect there is a significant difference"
+        "original": null
       },
       {
         "id": 2,
@@ -92,13 +92,13 @@
         "hook": "Significant tells you about evidence, not causal direction.",
         "status": "checked",
         "note": "",
-        "original": "2)Psychologist Tom investigates if there is a link between gaming of 4 hours/day and sleep problems of 450 young ppl. He finds that 60% of gamers have sleep problems compared to34% of non gamers. P=0.003, Tom concludes excessive gaming causes sleep problems. What is the problem worth in this conclusion? \n•\tThis is correlation research not causal evidence. BECAUSE CORRELATION ≠ CAUSATION"
+        "original": null
       },
       {
         "id": 3,
         "topic": "Proportions",
         "title": "Margin of error: missing inputs",
-        "prompt": "Petra investigates dyslexia and wants a 95% confidence interval. The saved notes give no sample size, sample proportion, standard error, or interval endpoints. Can we calculate the margin of error?",
+        "prompt": "Petra investigates dyslexia and wants a 95% confidence interval. The question gives no sample size, sample proportion, standard error, or interval endpoints. Can we calculate the margin of error?",
         "options": [
           "Yes: every 95% interval has margin of error 0.05.",
           "Yes: the confidence level alone gives 0.105.",
@@ -110,19 +110,19 @@
           "A confidence level tells us the multiplier, not how variable the estimate is.",
           "For a large-sample interval for one proportion, obtain p̂ and n, then calculate SE.",
           "Multiply SE by 1.96 for a 95% normal interval.",
-          "If endpoints are available, the margin is half the interval width. The recorded 0.105 cannot be checked from this fragment."
+          "If endpoints are available, the margin is half the interval width. The keyed 0.105 cannot be checked from this information."
         ],
         "formula": "ME = 1.96 × √[p̂(1 − p̂)/n]\nOr ME = (upper − lower)/2",
         "hook": "Confidence level + uncertainty → margin.",
         "status": "incomplete",
-        "note": "Recorded answer: 0.105. Required inputs are absent; this is a diagnostic practice item, excluded from your score.",
-        "original": "3)school psychologist Petra is investigating dyslexia in primary school. She want to have a 95% confidence interval in her advice. What is the margin of error?\n•\t0.105"
+        "note": "Keyed answer: 0.105. Required inputs are absent; this is a diagnostic practice item, excluded from your score.",
+        "original": null
       },
       {
         "id": 4,
         "topic": "Proportions",
         "title": "A probability needs a model",
-        "prompt": "Fatima welcomes 200 first-year students. The notes mention “at least 10% has a learning disability,” followed by the answer 0.1492. What can be determined from this fragment?",
+        "prompt": "Fatima welcomes 200 first-year students. The question mentions “at least 10% has a learning disability,” with the answer 0.1492. What can be determined from this information?",
         "options": [
           "The probability is always 0.1492 when n = 200.",
           "A sample size alone determines the population proportion.",
@@ -132,15 +132,15 @@
         "correct": 3,
         "steps": [
           "At least 10% of 200 means at least 20 students.",
-          "If the original question asks for a probability, we need a population probability and a sampling model.",
+          "If the question asks for a probability, we need a population probability and a sampling model.",
           "For independent students with probability p, X follows a binomial model with n = 200.",
-          "Then calculate P(X ≥ 20), or use an appropriate approximation. We cannot choose the numerical result from the saved fragment."
+          "Then calculate P(X ≥ 20), or use an appropriate approximation. We cannot choose the numerical result from this information."
         ],
         "formula": "10% × 200 = 20\nIf X ~ Binomial(200, p): P(X ≥ 20) = 1 − P(X ≤ 19)",
         "hook": "Translate the words first; then find the missing model.",
         "status": "incomplete",
-        "note": "Recorded answer: 0.1492. The question fragment is insufficient to verify it.",
-        "original": "4)Students have diagnosed learning disability. Study advisor Fatima welcomes a group of 200 new first year students. she learns that at least 10% of the group has a learning disability\n•\t0.1492"
+        "note": "Keyed answer: 0.1492. The information given is insufficient to verify it.",
+        "original": null
       },
       {
         "id": 5,
@@ -164,8 +164,8 @@
         "formula": "p̃ = (successes + 1)/(n + 2)\nCI = (p̃₁ − p̃₂) ± 1.96 × SE",
         "hook": "Plus four overall = plus two people per group.",
         "status": "corrected",
-        "note": "Your saved interval (0.176, 0.240) does not match the supplied counts. It is preserved below.",
-        "original": "11;45 5)are parents of girls more inclined . A simple random sample of 50 girls and 45 boys were taken in a large university on the west coast. 20 girls and 21 boys what is the 95+4 confidence interval for the difference in population proportions. Girls are group 1 and boys are group 2\n•\t(0.176, 0.240)"
+        "note": "The keyed interval (0.176, 0.240) does not match the supplied counts.",
+        "original": null
       },
       {
         "id": 6,
@@ -189,7 +189,7 @@
         "hook": "One common cause can connect two outcomes.",
         "status": "checked",
         "note": "",
-        "original": "12;30 6)study advisor investigates whether class tendencies relate to passing class 35% pass…p=0.018. Colleagues suggest that motivated students that attended lectures more often also passed more often. What is the colleague's proposition and example of?\n•\tan alternative explanation or third variable\n•\t(Learn an example of reverse causality Example of type 1 and type 2 error)"
+        "original": null
       },
       {
         "id": 7,
@@ -213,18 +213,18 @@
         "formula": "χ² = Σ[(O − E)²/E]\nE = 64/6",
         "hook": "Observed minus expected, square, divide, add.",
         "status": "corrected",
-        "note": "Recorded answer: 2.8. With the listed counts, the statistic is 5.375.",
-        "original": "7)developmental psychologists jasper tests a dice. 1=8x 2=16 3=13 4=9 5=11 6=7. Before using a goodness of fit test to test if the dice was fair, what is the square chi test statistic \n•\t2.8"
+        "note": "Keyed answer: 2.8. With the listed counts, the statistic is 5.375.",
+        "original": null
       },
       {
         "id": 8,
         "topic": "Chi-square",
         "title": "Check the test identity",
-        "prompt": "The notes describe a two-proportion test, a statistic of 2.5, a two-sided p = 0.032, and a proposed χ² = 4.62. Which statement is defensible?",
+        "prompt": "A question describes a two-proportion test, a statistic of 2.5, a two-sided p = 0.032, and a proposed χ² = 4.62. Which statement is defensible?",
         "options": [
           "A one-degree-of-freedom chi-square test always doubles the p-value.",
           "Any t statistic of 2.5 always gives χ² = 4.62.",
-          "If 2.5 is the matching two-sided z statistic, χ² = 6.25; the recorded values are inconsistent.",
+          "If 2.5 is the matching two-sided z statistic, χ² = 6.25; the given values are inconsistent.",
           "Squaring 2.5 gives 4.62."
         ],
         "correct": 2,
@@ -233,24 +233,24 @@
           "With the same null, data, and no continuity correction, χ² with 1 df equals z².",
           "If z = 2.5, then χ² = 6.25, with a p-value of approximately 0.0124 for both tests.",
           "A two-sided normal-test p = 0.032 corresponds instead to |z| ≈ 2.14 and χ² ≈ 4.60.",
-          "A generic t test does not have this chi-square identity. Check the original output before accepting any of these recorded values."
+          "A generic t test does not have this chi-square identity. Check the output before accepting any of these values."
         ],
         "formula": "For matching two-proportion tests: χ²₍₁₎ = z²\n2.5² = 6.25",
         "hook": "Identify the statistic before squaring it.",
         "status": "incomplete",
-        "note": "The test name and numbers conflict. Original proposed answer “χ² = 4.62 and p” is preserved; this item is excluded from your score.",
-        "original": "15;40 8)psychologist Mark investigates the relationship between depressive symptoms and for school performance in 167 young ppl he performed a chi test for two proportions and a square (T^2?)test (or T test). T test gave us 2.5 and P=0.032 two tailed. What do you expect from the T square test \n•\tX^2=4.62 and p"
+        "note": "The test name and numbers conflict. The keyed answer “χ² = 4.62 and p” is kept; this item is excluded from your score.",
+        "original": null
       },
       {
         "id": 9,
         "topic": "Chi-square",
         "title": "Question text is missing",
-        "prompt": "Question 9 contains only the recorded answer “30.7.” What is needed before a numerical multiple-choice question can be solved?",
+        "prompt": "Question 9 gives only the answer “30.7.” What is needed before a numerical multiple-choice question can be solved?",
         "options": [
           "Assume the missing sample size is 30.7.",
           "Nothing: 30.7 must be a chi-square statistic.",
           "Only the question number.",
-          "The original question and its data or output."
+          "The full question and its data or output."
         ],
         "correct": 3,
         "steps": [
@@ -261,14 +261,14 @@
         "formula": "No question + no data → no verifiable calculation",
         "hook": "Do not learn an unexplained number.",
         "status": "incomplete",
-        "note": "Only 30.7 was recorded; the original question is absent.",
-        "original": "9)\n•\t30.7"
+        "note": "Only the answer 30.7 is given; the question is incomplete.",
+        "original": null
       },
       {
         "id": 10,
         "topic": "Chi-square",
         "title": "The alternative hypothesis",
-        "prompt": "The notes refer to comparing men and women across named location categories using a chi-square test. Which is an appropriate alternative hypothesis?",
+        "prompt": "A question refers to comparing men and women across named location categories using a chi-square test. Which is an appropriate alternative hypothesis?",
         "options": [
           "Every individual has a different location.",
           "The distribution of location categories differs between men and women.",
@@ -285,14 +285,14 @@
         "formula": "H₀: same distribution / independence\nHₐ: different distribution / association",
         "hook": "Categorical outcomes → compare proportions, not means.",
         "status": "checked",
-        "note": "The source calls this a “T squared” test. A chi-square test is the likely intended test given the categorical hypothesis; verify the original test name.",
-        "original": "10)what would be a good hypothesis for a T squared test based on this data\n•\tThe percentage of diferențe named locations are different for men and women"
+        "note": "The question calls this a “T squared” test. A chi-square test is the likely intended test given the categorical hypothesis.",
+        "original": null
       },
       {
         "id": 11,
         "topic": "Regression",
         "title": "Read the slope from the equation",
-        "prompt": "A regression line is recorded as ŷ = 42 + 0.88x, with r = 0.45. What is the slope of this displayed line?",
+        "prompt": "A regression line is given as ŷ = 42 + 0.88x, with r = 0.45. What is the slope of this displayed line?",
         "options": [
           "0.45.",
           "0.88.",
@@ -309,14 +309,14 @@
         "formula": "ŷ = b₀ + b₁x\nb₀ = 42; b₁ = 0.88",
         "hook": "The number attached to x is the slope.",
         "status": "corrected",
-        "note": "The saved answer is 0.455, but the displayed equation gives slope 0.88. If the equation was transcribed incorrectly, check the original.",
-        "original": "11)a group investigates the patients who have therapy sessions ranged. On a scale from 1 to 100 he find r=0.45. The regression linn is y=42+0.88…what is the slope\n•\t0.455"
+        "note": "The keyed answer is 0.455, but the displayed equation gives slope 0.88. Check which numbers the question gives.",
+        "original": null
       },
       {
         "id": 12,
         "topic": "Correlation",
         "title": "An inverse relationship",
-        "prompt": "The fragment says “researchers tend to be poor teachers and vice versa.” If research quality and teaching quality are both scored from low to high, what pattern does this describe?",
+        "prompt": "A statement says “researchers tend to be poor teachers and vice versa.” If research quality and teaching quality are both scored from low to high, what pattern does this describe?",
         "options": [
           "Research quality has been proven to cause teaching quality.",
           "A negative association: higher research scores tend to accompany lower teaching scores.",
@@ -325,7 +325,7 @@
         ],
         "correct": 1,
         "steps": [
-          "This is a concept practice question reconstructed from a sentence, not the full exam wording.",
+          "This is a concept practice question built from a single sentence.",
           "Put research quality on x and teaching quality on y.",
           "The description pairs higher x with lower y.",
           "That is a negative association; it gives neither the exact strength nor causal evidence."
@@ -333,8 +333,8 @@
         "formula": "Higher x tends to go with lower y → negative association",
         "hook": "Opposite directions → negative.",
         "status": "incomplete",
-        "note": "The original question and intended answer are missing; this is a clearly labeled concept reconstruction, excluded from your score.",
-        "original": "12)- researchers tend to be poor teachers and vice versa"
+        "note": "The question is incomplete; this is a clearly labeled concept question, excluded from your score.",
+        "original": null
       },
       {
         "id": 13,
@@ -358,13 +358,13 @@
         "hook": "A smoother pattern can hide individual variation.",
         "status": "checked",
         "note": "",
-        "original": "13)researcher Fatima has 2 data sets. Data set A shows the relationship between IQ and income r=0.27 for 1000 individuals. Data set B shows average income per iq category r=0.58. For the same individuals why is the correlation and the data set\n•\ta correlation reduced the noise and enhances the pattern"
+        "original": null
       },
       {
         "id": 14,
         "topic": "Correlation",
         "title": "Changing units",
-        "prompt": "The original question is incomplete: “for each school hours playing outside … what happens to the correlation?” If it meant changing hours to minutes, what would happen to Pearson r?",
+        "prompt": "The question is incomplete: “for each school hours playing outside … what happens to the correlation?” If it meant changing hours to minutes, what would happen to Pearson r?",
         "options": [
           "It is multiplied by 60.",
           "It stays the same under a positive linear change of units.",
@@ -381,8 +381,8 @@
         "formula": "For a, c > 0:\nr(aX + b, cY + d) = r(X, Y)",
         "hook": "New units, same linear pattern.",
         "status": "incomplete",
-        "note": "Recorded answer: “the correlation remains exactly the same.” The missing transformation prevents verification; this conditional reconstruction is excluded from scoring.",
-        "original": "14)for each school hours playing outside …what happens to the correlation?\n•\tthe correlation remains exactly the same"
+        "note": "Keyed answer: “the correlation remains exactly the same.” The missing transformation prevents verification; this conditional version is excluded from scoring.",
+        "original": null
       },
       {
         "id": 15,
@@ -406,13 +406,13 @@
         "hook": "An overall pattern need not survive inside one subgroup.",
         "status": "checked",
         "note": "",
-        "original": "15)the correlation between IQ and dance performance for the group of children age between 6 and 12 years old is 0.72. What would the correlation be if we only took the group of 10 year olds?\n•\tthe correlation is expected to decrease"
+        "original": null
       },
       {
         "id": 16,
         "topic": "Regression",
         "title": "What does a residual pattern mean?",
-        "prompt": "The notes mention a “clear pattern” in a residual plot but do not include the graph. Which interpretation is justified?",
+        "prompt": "A question mentions a “clear pattern” in a residual plot but do not include the graph. Which interpretation is justified?",
         "options": [
           "Any pattern always proves homoscedasticity.",
           "A residual plot can never reveal a model problem.",
@@ -425,19 +425,19 @@
           "A fan shape means the vertical spread grows or shrinks: this challenges constant error variance.",
           "A curved mean pattern challenges the linear form of the model.",
           "Error normality is usually assessed with a Q–Q plot or distribution of residuals.",
-          "Without the actual graph, the saved conclusion about homoscedasticity cannot be verified. Under unequal variance, conventional standard errors can be unreliable."
+          "Without the actual graph, the keyed conclusion about homoscedasticity cannot be verified. Under unequal variance, conventional standard errors can be unreliable."
         ],
         "formula": "Residual = y − ŷ\nFan → unequal variance\nCurve → nonlinearity",
         "hook": "Spread and shape answer different questions.",
         "status": "incomplete",
-        "note": "Recorded answer refers to homoscedasticity and unreliable standard errors, but the diagnostic plot is missing.",
-        "original": "16)can a psychologist…upon inspection her residual plot, she sees a clear pattern had low predicted values….\n-homoscedasticity (the standard errors are unreliable) (also learn liberality, the predictions are distorted and modality"
+        "note": "The keyed answer refers to homoscedasticity and unreliable standard errors, but the diagnostic plot is missing.",
+        "original": null
       },
       {
         "id": 17,
         "topic": "Regression",
         "title": "Finding F from missing output",
-        "prompt": "The source says “there’s a graph… find the associated F statistic,” but the graph and values are absent. What is the correct approach?",
+        "prompt": "A question says “there’s a graph… find the associated F statistic,” but the graph and values are absent. What is the correct approach?",
         "options": [
           "Recover the output, then divide model mean square by error mean square.",
           "Use the p-value itself as F.",
@@ -454,8 +454,8 @@
         "formula": "F = MSM/MSE\nRegression: F = (R²/k)/[(1 − R²)/(n − k − 1)]",
         "hook": "F = model signal per df ÷ error per df.",
         "status": "incomplete",
-        "note": "The graph and recorded answer are missing.",
-        "original": "17)there’s a graph…find the associated F static for the results."
+        "note": "The graph and keyed answer are missing.",
+        "original": null
       },
       {
         "id": 18,
@@ -480,7 +480,7 @@
         "hook": "Work backwards: F → MSE → error df → n.",
         "status": "checked",
         "note": "",
-        "original": "18)in a multiple regression of 3 explanatory variables the total sum of squares sst=1008. The model mean square msm= 76, the tests statistic f=2.533. How many observations are used?\n•\t30"
+        "original": null
       },
       {
         "id": 19,
@@ -504,13 +504,13 @@
         "hook": "Predicting ONE person is harder than estimating an average.",
         "status": "checked",
         "note": "",
-        "original": "19)the confidence intervals for the mean response were wider than, narrower than or the same as the predicting intervals?\n•\tnarrower (ci for mean is narrower)"
+        "original": null
       },
       {
         "id": 20,
         "topic": "Regression",
         "title": "The sign of the correlation",
-        "prompt": "The original question refers to SPSS output for the weight and mileage of 15 cars. The output is missing. The recorded false statement is “the correlation is positive and equals 0.662.” What can we verify?",
+        "prompt": "A question refers to SPSS output for the weight and mileage of 15 cars. The output is missing. The keyed false statement is “the correlation is positive and equals 0.662.” What can we verify?",
         "options": [
           "A sample of 15 means r = 0.15.",
           "The correlation must be positive because R² is positive.",
@@ -522,13 +522,13 @@
           "Recover the SPSS coefficients or scatterplot.",
           "In simple linear regression with an intercept, r has the same sign as the fitted slope.",
           "If R² is available, |r| = √R², but the sign still comes from the slope.",
-          "The notes may be flagging a negative relationship. We cannot verify −0.662 or the false option without the output."
+          "The question may be flagging a negative relationship. We cannot verify −0.662 or the false option without the output."
         ],
         "formula": "Simple regression: r = sign(slope) × √R²",
         "hook": "R² loses the sign; the slope restores it.",
         "status": "incomplete",
-        "note": "The saved false statement is preserved, but the output needed to check it is absent.",
-        "original": "20)researchers randomly select 15 cars, they collected their weight and get millegae for each car. From a scatterplot the linear model seemed appropriate, here as the output obtained from SPSS which of the following statements is false?\n•\tthe correlation between weight and mileage is positive and has tha value of 0.662 (false)"
+        "note": "The keyed false statement is kept, but the output needed to check it is absent.",
+        "original": null
       },
       {
         "id": 21,
@@ -552,8 +552,8 @@
         "formula": "m = k(k − 1)/2 = 6\nFWER ≈ 1 − (1 − α)ᵐ = 0.2649",
         "hook": "Familywise = at least ONE false alarm across the family.",
         "status": "checked",
-        "note": "The saved answer 0.26 uses the independent-tests approximation. The actual rate depends on the joint dependence and testing procedure.",
-        "original": "21)the psychological science mark compares 4 teaching methods and equals 15 per group, he finds x is 36.56= 2.8. P=0.048. Without correction he performs a pieri wise test. With P between 0.3 and 0.8. A colleague warns him about the often inflation of the alpha level at a 0.05 per test. What is the famlily error rate, aka family wise error rate.\n•\tProbability that at least one type 1 error false positive result will occurs multiple hypothesis test, 0.26."
+        "note": "The keyed answer 0.26 uses the independent-tests approximation. The actual rate depends on the joint dependence and testing procedure.",
+        "original": null
       },
       {
         "id": 22,
@@ -577,7 +577,7 @@
         "hook": "Variance → square root → standard deviation.",
         "status": "checked",
         "note": "",
-        "original": "22)Laura compared ANOVA kids mse=52.9 what is the pooled estimate of the common standard deviation rounded to 2 decimal places. \n•\t7.27"
+        "original": null
       },
       {
         "id": 23,
@@ -601,7 +601,7 @@
         "hook": "Top: groups minus one. Bottom: people minus groups.",
         "status": "checked",
         "note": "",
-        "original": "23)a study group compares the means of 6 conditions of 10 observations, and each condition. What are the degrees of freedom for the f statistic? (6x10=60 -6=54)\n•\t5 and 54"
+        "original": null
       },
       {
         "id": 24,
@@ -625,7 +625,7 @@
         "hook": "Not all equal does NOT mean all different.",
         "status": "checked",
         "note": "",
-        "original": "min27:29 24)a study was conducted to compare 5 different training programs for improving endurance 40 subjects were randomly divided into 5 groups of 8 subjects in each group. A different training program was assigned to each group. After 2 moths the improvement in endurance was recorded for each subject. A one way ANOVA is used to compare the 5 training program. The resulting p value is equal to 0.035 at a significance level of 0.05 what is the appropriate conclusion about mean improvement in endurance?\n•\tIt appears that at least 1 of the 5 training groups programs has a significantly different average amount of improvement."
+        "original": null
       },
       {
         "id": 25,
@@ -649,7 +649,7 @@
         "hook": "Factor creates the groups; response is what you measure.",
         "status": "checked",
         "note": "",
-        "original": "25) suppose you are interested in conducting a study to determine the best of every method for teaching a basic statistics course. Students are randomly assigned to take the course in online format, hybrid format or traditional face to face format. What would be an appropriate response variable if an ANOVA was used for the announces?\n•\t score of each student on a final exam?"
+        "original": null
       },
       {
         "id": 26,
@@ -664,17 +664,17 @@
         ],
         "correct": 3,
         "steps": [
-          "First identify the requested quantity. The saved question does not say clearly whether it asks for MS or F, so this version asks for both.",
+          "First identify the requested quantity. The question does not say clearly whether it asks for MS or F, so this version asks for both.",
           "MS_B = SS_B/df_B = 840/2 = 420.",
           "MSE = SSE/df_error = 20600/144 ≈ 143.0556.",
           "F_B = MS_B/MSE = 420/143.0556 ≈ 2.94.",
-          "The recorded 16.80 cannot be obtained from these stated sums of squares and degrees of freedom."
+          "The keyed 16.80 cannot be obtained from these stated sums of squares and degrees of freedom."
         ],
         "formula": "MS_B = 840/2 = 420\nMSE = 20600/144 = 143.0556\nF_B = 420/143.0556 ≈ 2.94",
         "hook": "Every effect uses its OWN MS over the SAME error MS.",
         "status": "corrected",
-        "note": "The fragment writes “SS=.840” and later “SS=840.” This version uses the explicit 840. Recorded answer: 16.80; it conflicts with the supplied table.",
-        "original": "Min29 26) research jasmin performs a 2 by 3 ANOVA on the individuals 25…for main effect A SS=418 df=1, for main effect B SS=.840 df=2. For interaction as well SS =360 df=2, SS=20600 df=144. What is the… for main effect B\n•\t SS=840, df=2…16.80"
+        "note": "The question writes “SS=.840” and later “SS=840.” This version uses the explicit 840. Keyed answer: 16.80; it conflicts with the supplied table.",
+        "original": null
       },
       {
         "id": 27,
@@ -693,19 +693,19 @@
           "The effect changes direction: positive with monetary reward, negative without reward.",
           "This is an interaction pattern: the effect of feedback depends on reward.",
           "A main effect averages across reward conditions, so it can hide that reversal.",
-          "If the interaction test is significant, examine cell means and suitable simple-effect tests. The source writes interaction “p=>0.001,” which is ambiguous; recover the exact p-value before asserting significance."
+          "If the interaction test is significant, examine cell means and suitable simple-effect tests. The question writes interaction “p=>0.001,” which is ambiguous; recover the exact p-value before asserting significance."
         ],
         "formula": "Feedback effect at one reward level ≠ effect at another\nInteraction → inspect CELL means",
         "hook": "Ask “Does it help?” → “Under which reward condition?”",
         "status": "checked",
-        "note": "The interpretation is supported by the described pattern. The recorded interaction p-value is ambiguous, so statistical significance of that interaction is not assumed.",
-        "original": "27) Emma conducts a 2 by 3 ANOVA. She finds main effect of feedback f(1.54)=12.4, p=0.001, main effect of reward f(2.54)=1.8, p= 0.18. Interruption f(2.54)=18.9, p=>0.001. In the plot she sees that feedback has larger effect. There was a monetary reward but there was a negative effect when there was no reward. How should she interpret this?\n•\tThe interaction effect is important, the main effect is not too much on their own (idk)"
+        "note": "The interpretation is supported by the described pattern. The given interaction p-value is ambiguous, so statistical significance of that interaction is not assumed.",
+        "original": null
       },
       {
         "id": 28,
         "topic": "ANOVA",
         "title": "SSE needs the group data",
-        "prompt": "The source refers to a physical-properties exercise involving types and a table, asking for SSE. The table is missing. What is the appropriate calculation once it is recovered?",
+        "prompt": "A question refers to a physical-properties exercise involving types and a table, asking for SSE. The table is missing. What is the appropriate calculation once it is recovered?",
         "options": [
           "Add squared distances of observations from their own group means, or use SST − SSM when supplied.",
           "Calculate only the distance between the largest and smallest group means.",
@@ -718,19 +718,19 @@
           "Subtract each observation’s OWN group mean from it.",
           "Square each residual and add them all.",
           "If SST and SSM are given, use SSE = SST − SSM.",
-          "The recorded 144.00 cannot be verified because the original design and table are missing."
+          "The keyed 144.00 cannot be verified because the design and table are not given."
         ],
         "formula": "SSE = Σ_groups Σ_people (yᵢⱼ − ȳⱼ)²\nOne-way decomposition: SST = SSM + SSE",
         "hook": "Error = distance from your OWN group mean.",
         "status": "incomplete",
-        "note": "Recorded answer: 144.00. Missing table prevents numerical verification; the method above assumes the one-way model.",
-        "original": "28) a research project studied the physical properties of …by bonding together… This was that exercise with the tree types and the table. What is the value of the sum of squares SSE?\n•\t144.00"
+        "note": "Keyed answer: 144.00. Missing table prevents numerical verification; the method above assumes the one-way model.",
+        "original": null
       },
       {
         "id": 29,
         "topic": "Two-way ANOVA",
         "title": "What do parallel lines show?",
-        "prompt": "The notes describe two parallel lines labeled A₁ and A₂ on a two-way ANOVA plot, but the plot is missing. What follows from parallel sample-mean lines alone?",
+        "prompt": "A question describes two parallel lines labeled A₁ and A₂ on a two-way ANOVA plot, but the plot is missing. What follows from parallel sample-mean lines alone?",
         "options": [
           "Only factor B must be statistically significant.",
           "Parallel lines prove a statistically significant interaction.",
@@ -743,13 +743,13 @@
           "A constant gap shows no interaction pattern in the displayed means.",
           "If the two A lines have different overall heights, there is a main-effect pattern for A.",
           "If the average height changes across B levels, there is a main-effect pattern for B.",
-          "A graph alone does not establish statistical significance; use the tests and their uncertainty. Without the graph we cannot verify the saved B-only conclusion."
+          "A graph alone does not establish statistical significance; use the tests and their uncertainty. Without the graph we cannot verify the keyed B-only conclusion."
         ],
         "formula": "Parallel → constant A difference across B\nA effect → compare line averages\nB effect → average the lines at each B level",
         "hook": "Parallel answers interaction; averages answer main effects.",
         "status": "incomplete",
-        "note": "Recorded answer: only a possible B main effect. The omitted graph is needed to check the main-effect pattern.",
-        "original": "29)a survey forms a graph from the results of a two way ANOVA. This is a graph that shows 2 parallel lines labeled A1, A2. \n•\tthere was a no show of a possible significant main effect for a factor B and no other significant effect."
+        "note": "Keyed answer: only a possible B main effect. The omitted graph is needed to check the main-effect pattern.",
+        "original": null
       },
       {
         "id": 30,
@@ -773,7 +773,7 @@
         "hook": "Interaction: multiply the two factor dfs.",
         "status": "checked",
         "note": "",
-        "original": "30) a study compares 3 leves of factor A and 3 levels of factor B, with 10 observations in each cell. What are the degrees of freedom of the f statistics that is used to test for interaction?\n•\t4 and 81"
+        "original": null
       },
       {
         "id": 31,
@@ -792,13 +792,13 @@
           "Calculate the grand mean of all 12 observations.",
           "For each score, calculate score minus grand mean, then square.",
           "Add all 12 squared deviations.",
-          "The saved answer 104 cannot be verified without the scores. Removing person means calculates a different component, not total SS."
+          "The keyed answer 104 cannot be verified without the scores. Removing person means calculates a different component, not total SS."
         ],
         "formula": "SST = Σ_all observations (y − grand mean)²",
         "hook": "TOTAL uses the GRAND mean.",
         "status": "incomplete",
-        "note": "Recorded answer: 104. The original table is missing.",
-        "original": "31) in the table below we see the repeseated measurement for 3 different educations for 4 different people. What is the value of the total sum of squares SST for this data\n•\t104"
+        "note": "Keyed answer: 104. The table is not given.",
+        "original": null
       },
       {
         "id": 32,
@@ -822,32 +822,32 @@
         "hook": "Count factors; then ask “same people or different people?”",
         "status": "checked",
         "note": "",
-        "original": "32)nutritionist conducted a experiment on memory for dreams she wanted to test whether it really was true that eating cheese before going to bed made you have bad dreams. Over 3 nights the nutritionist fed people different foods for before bed on one night they had nothing to eat on the the second nigh they had a big plate of cheese and on tht third night they had another dairy product (milk). The order of the food were counterbalanced across people. She measured heart rate during dreams. What type of test should be used?\n•\tOne way repeated measures ANOVA\n•\t(note to self: Also learn one way independent ANOVA, two way independent ANOVA, two way repeated measure ANOVA)"
+        "original": null
       },
       {
         "id": 33,
         "topic": "Repeated measures",
         "title": "An unclear test name",
-        "prompt": "The source reads: “Most T tests can be seen as the repeated measure variant of the ____.” The saved answer is “Levine’s test.” What should you do with this item?",
+        "prompt": "A sentence reads: “Most T tests can be seen as the repeated measure variant of the ____.” The keyed answer is “Levine’s test.” What should you do with this item?",
         "options": [
           "Assume all variance tests test mean differences.",
           "Use Levene’s test to compare every pair of repeated-measures means.",
-          "Recover the original test name; the sentence as written is not a valid general statement about t tests.",
+          "Recover the intended test name; the sentence as written is not a valid general statement about t tests.",
           "Memorize that all t tests are repeated-measures Levene tests."
         ],
         "correct": 2,
         "steps": [
-          "The phrase “Most T tests” appears mistranscribed. Do not turn it into a factual exam rule.",
+          "The phrase “Most T tests” is not a valid general statement. Do not turn it into a rule.",
           "Levene’s test assesses equality of variances across groups; it is not generally a test of mean differences.",
           "A paired t test compares the mean within-person difference with zero.",
-          "If the original named Mauchly’s test, it assesses sphericity in repeated-measures ANOVA. It plays an assumption-checking role, but tests a different condition from Levene’s.",
+          "If the sentence named Mauchly’s test, it assesses sphericity in repeated-measures ANOVA. It plays an assumption-checking role, but tests a different condition from Levene’s.",
           "Recover the exact question before deciding which test belongs in the blank."
         ],
         "formula": "Levene → equal group variances\nPaired t → mean paired difference\nMauchly → sphericity",
         "hook": "Test names matter: means, variances, and sphericity differ.",
         "status": "incomplete",
-        "note": "Recorded answer: “Levine’s test” (usually spelled Levene’s). The original sentence cannot be reliably reconstructed.",
-        "original": "33)finish the following sentence:  Most T tests can be seen as the repeated measure variant of the______.\n•\tLevine's test\n•\t(not to self: Also learn about T test Bonferroni correlation F test)"
+        "note": "Keyed answer: “Levine’s test” (usually spelled Levene’s). The sentence cannot be completed reliably.",
+        "original": null
       },
       {
         "id": 34,
@@ -871,8 +871,8 @@
         "formula": "p = 0.13 > 0.05 → fail to reject H₀\nFor the specified alternative: β = 1 − power = 0.58",
         "hook": "Not detected does not mean absent.",
         "status": "corrected",
-        "note": "The notes list “there is no effect” as a second correct answer. That conclusion is not supported by a non-significant test alone.",
-        "original": "34)in 30 patients, researcher finds no significant effect F(2.58)=2.1, P=0.13. But she sees a clear pattern and the mesh means power analysis shows power 0.42, what is the best conclusion?\n•\tThere may be a a type 2 error, insufficient power \n•\tthere is no effect of medication \n•\t(there were 2 correct answers)"
+        "note": "“There is no effect” can look like a second correct answer. That conclusion is not supported by a non-significant test alone.",
+        "original": null
       },
       {
         "id": 35,
@@ -896,14 +896,14 @@
         "formula": "SST = SS_persons + SSM + SSR\nSSR = 450 − 180 − 120 = 150",
         "hook": "Remove person differences AND the condition effect.",
         "status": "corrected",
-        "note": "Recorded answer: 115. The supplied sums of squares instead give residual SS = 150.",
-        "original": "35) psychologist tom has eight people at 4 points in time, he calculates SST=450, SSB between person = 180, SSW=270, SSM=120, what is the SSR?\n•\t115"
+        "note": "Keyed answer: 115. The supplied sums of squares instead give residual SS = 150.",
+        "original": null
       },
       {
         "id": 36,
         "topic": "Research methods",
         "title": "Limits of within-subject designs",
-        "prompt": "The saved design question is incomplete. Which carefully stated principle is correct?",
+        "prompt": "This design question is incomplete. Which carefully stated principle is correct?",
         "options": [
           "Between-subject designs are always more sensitive.",
           "Within-subject designs always have higher external validity.",
@@ -916,13 +916,13 @@
           "This often reduces noise from stable individual differences.",
           "But some treatments have irreversible or lasting effects, and some characteristics cannot be manipulated within the same person.",
           "Sensitivity and external validity depend on the actual design; blanket “always” claims are unsafe.",
-          "The source also mentions matched groups. Matching alone does not establish causality; stronger causal conclusions require an appropriate experimental design and control of alternatives."
+          "The question also mentions matched groups. Matching alone does not establish causality; stronger causal conclusions require an appropriate experimental design and control of alternatives."
         ],
         "formula": "Within subjects: same people, different conditions\nPermanent carryover can make that unsuitable",
         "hook": "Same-person comparisons help only when the conditions can be compared fairly.",
         "status": "incomplete",
-        "note": "The source says “Research questions cant be answered with within subject design (true).” The missing qualification matters; this is a corrected concept reconstruction, excluded from your score.",
-        "original": "36) which is true: \n•\tResearch questions cant be answered with within subject design (true)\n•\tBetween subject design are more sensitive than within subject design (false)\n•\tBetween subject designs have lower external validity than Within subject deigns (false) \n•\tWe cant establish causality with matched group design (false)"
+        "note": "The statement “Research questions cant be answered with within subject design” is keyed as true. The missing qualification matters; this is a corrected concept question, excluded from your score.",
+        "original": null
       },
       {
         "id": 37,
@@ -941,13 +941,13 @@
           "Temporal order means that the proposed cause precedes the effect.",
           "We also need to address plausible alternative explanations, including confounding.",
           "Knowing that X came first does not show that a third variable did not cause both.",
-          "The second statement is incomplete in the original, so this answer is conditional on the reading stated in the question."
+          "The second statement is incomplete, so this answer is conditional on the reading stated in the question."
         ],
         "formula": "Causal evidence: covariation + temporal precedence + control of alternatives",
         "hook": "Together, before, and no plausible alternative.",
         "status": "incomplete",
-        "note": "The original second statement is unclear. The recorded answer “both false” is preserved; the reconstructed interpretation is explicit and excluded from scoring.",
-        "original": "37) which of the following is true\nstatement 1: to conclude that parable x influences parable y we need to satisfy 2 criteria, covariation and temporal order\nStatement 2:effects on ..bidreictioanlity problem we can conclude that X has caused Y\n•\tStatement 1 and true are both false"
+        "note": "The second statement is unclear. The keyed answer “both false” is kept; the interpretation used is explicit and excluded from scoring.",
+        "original": null
       },
       {
         "id": 38,
@@ -971,7 +971,7 @@
         "hook": "A difference is one claim; a cause is another.",
         "status": "checked",
         "note": "",
-        "original": "38) read the following 2 sentences 1:difference in blood pressure measures between the two condition is beyond what we could expect simply by chance is a STATISTICAL INFERENCE\n2: the statement watching a video influenced participants blood pressure is a CAUSAL INFERENCE"
+        "original": null
       },
       {
         "id": 39,
@@ -995,7 +995,7 @@
         "hook": "Science relies on an honest evidence trail.",
         "status": "checked",
         "note": "",
-        "original": "39) why is data fabrication or falsification according to chapter 3 of passer book one of the most ethical violations in science\n•\tIt undermines the trust and integrity of science"
+        "original": null
       },
       {
         "id": 40,
@@ -1020,7 +1020,7 @@
         "hook": "Share the first and last positions fairly.",
         "status": "checked",
         "note": "",
-        "original": "40) What is the purpose of counterbalancing in within subject design \nTo minimise recurring  effects so that no condition has an additional advantage"
+        "original": null
       }
     ]
   },
@@ -6832,7 +6832,7 @@ const hasAnswer=q=>Object.prototype.hasOwnProperty.call(answers,q.id);
 const scored=q=>q.status!=='incomplete';
 const isRight=q=>hasAnswer(q)&&answers[q.id]===q.correct;
 function visible(){return questions.filter(q=>(topic==='all'||q.topic===topic)&&(filter==='all'||(filter==='scored'&&scored(q))||(filter==='unanswered'&&(!hasAnswer(q)||q.id===revealedId))||(filter==='mistakes'&&scored(q)&&hasAnswer(q)&&!isRight(q))||(filter==='incomplete'&&!scored(q))||(filter==='corrected'&&q.status==='corrected')));}
-const labels={checked:'Checked answer',corrected:'Corrected answer note',incomplete:'Incomplete · reasoning only'};
+const labels={checked:'Checked answer',corrected:'Corrected answer',incomplete:'Incomplete · reasoning only'};
 for(const t of [...new Set(bank.flatMap(f=>f.questions.map(q=>q.topic)))]){const o=document.createElement('option');o.value=t;o.textContent=t;$('topic').appendChild(o);}
 function renderTable(t){return '<div class="table-wrap"><table class="data-table"><caption>Data supplied for this question</caption><thead><tr>'+t.headers.map(h=>'<th scope="col">'+escapeHTML(h)+'</th>').join('')+'</tr></thead><tbody>'+t.rows.map(row=>'<tr>'+row.map((x,i)=>i===0?'<th scope="row">'+escapeHTML(x)+'</th>':'<td>'+escapeHTML(x)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';}
 function renderChart(c){
@@ -6879,11 +6879,11 @@ function render(moveFocus=false){
  let html=`<div class="cardtop"><span>QUESTION ${q.id} / 40 · ${escapeHTML(q.topic)}</span><span class="badge ${q.status}">${q.authored?'New practice':labels[q.status]}</span></div><h2 id="questionTitle" tabindex="-1">${escapeHTML(q.title)}</h2><p class="prompt">${escapeHTML(q.prompt)}</p>`;
  if(q.table)html+=renderTable(q.table);
  if(q.chart)html+=renderChart(q.chart);
- if(!scored(q))html+='<div class="notice">The original note is incomplete or inconsistent. Choose the best reasoning below; this item is excluded from your score.</div>';
- if(q.status==='corrected')html+='<div class="notice">The saved answer conflicts with the supplied information. Select your answer to see the calculation and the original note.</div>';
+ if(!scored(q))html+='<div class="notice">This question is incomplete or inconsistent. Choose the best reasoning below; this item is excluded from your score.</div>';
+ if(q.status==='corrected')html+='<div class="notice">The keyed answer conflicts with the supplied information. Select your answer to see the calculation.</div>';
  html+='<div class="options" role="group" aria-label="Answer choices">'+q.options.map((o,i)=>`<button class="option ${answered?(i===q.correct?'right':i===answers[q.id]?'wrong':''):''}" data-option="${i}" ${answered?'disabled':''}><span class="letter">${'ABCD'[i]}</span><span class="opttext">${escapeHTML(o)}</span>${answered&&i===q.correct?'<span class="resultmark">Best answer</span>':answered&&i===answers[q.id]?'<span class="resultmark">Your choice</span>':''}</button>`).join('')+'</div>';
  if(!answered)html+='<p class="preanswer">Choose one answer. The full approach appears immediately.</p><div id="feedbackStatus" role="status" aria-live="polite"></div>';
- if(answered){html+=`<section class="feedback" aria-label="Solution"><p class="verdict ${!right?'retry':''}" role="status">${!scored(q)?(right?'Good reasoning.':'Let’s check the reasoning.'):right?'Correct. You’ve got it.':'Let’s work through it.'}</p><p class="subtext">${!scored(q)?'Reasoning check only — no score awarded.':right?'Here is why this answer works.':'Your first answer is saved. The correct choice is highlighted above.'}</p>${q.note?`<div class="notice">${escapeHTML(q.note)}</div>`:''}<h3>How to approach this question</h3><ol class="steps">${q.steps.map(s=>'<li>'+escapeHTML(s)+'</li>').join('')}</ol><div class="formula">${escapeHTML(q.formula)}</div><div class="hook"><small>Remember it this way</small>${escapeHTML(q.hook)}</div>${q.authored?'<p class="provenance">New practice question, written for this set. Complete worked solution shown above.</p>':`<details><summary>Your original question &amp; answer notes — preserved verbatim</summary><pre class="source">${escapeHTML(q.original)}</pre></details>`}</section>`;}
+ if(answered){html+=`<section class="feedback" aria-label="Solution"><p class="verdict ${!right?'retry':''}" role="status">${!scored(q)?(right?'Good reasoning.':'Let’s check the reasoning.'):right?'Correct. You’ve got it.':'Let’s work through it.'}</p><p class="subtext">${!scored(q)?'Reasoning check only — no score awarded.':right?'Here is why this answer works.':'Your first answer is saved. The correct choice is highlighted above.'}</p>${q.note?`<div class="notice">${escapeHTML(q.note)}</div>`:''}<h3>How to approach this question</h3><ol class="steps">${q.steps.map(s=>'<li>'+escapeHTML(s)+'</li>').join('')}</ol><div class="formula">${escapeHTML(q.formula)}</div><div class="hook"><small>Remember it this way</small>${escapeHTML(q.hook)}</div>${q.authored?'<p class="provenance">New practice question, written for this set. Complete worked solution shown above.</p>':''}</section>`;}
  $('questionCard').innerHTML=html;
  $('questionCard').querySelectorAll('[data-option]').forEach(b=>b.addEventListener('click',()=>{answers[q.id]=Number(b.dataset.option);revealedId=q.id;save();render();const feedback=$('questionCard').querySelector('.feedback');feedback.setAttribute('tabindex','-1');feedback.focus({preventScroll:true});feedback.scrollIntoView({behavior:'smooth',block:'nearest'});}));
  const pos=list.findIndex(q=>q.id===current);$('prev').disabled=pos===0;$('next').disabled=pos===list.length-1;
@@ -6898,5 +6898,6 @@ $('unanswered').onclick=()=>{revealedId=null;const next=questions.find(q=>q.id>c
 $('mistakes').onclick=()=>{revealedId=null;topic='all';filter='mistakes';$('topic').value=topic;$('filter').value=filter;render(true);};
 render();
 </script>
+<script src="https://sezsaracoglu-lab.github.io/dashshboard-/assets/sitenav.js" defer></script>
 </body>
 </html>
